@@ -1,0 +1,63 @@
+.about-container {
+    padding: 50px;
+    text-align: center;
+  }
+  
+  .about-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    max-width: 900px;
+    margin: auto;
+  }
+  
+  .profile-pic {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .about-text {
+    max-width: 500px;
+  }
+  
+  .btnn {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin-top: 10px;
+    border: none;
+    cursor: pointer;
+    background-color: #1fd45e;
+    color: white;
+    border-radius: 5px;
+    transition: 0.3s;
+  }
+  
+  .btnn:hover {
+    background-color: #22c63d;
+  }
+  
+  /* Skills Section */
+  .skills-section {
+    margin-top: 40px;
+  }
+  
+  .skills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 15px;
+  }
+  
+  .skills span {
+    background-color: #f0f0f0;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: bold;
+  }
+  
