@@ -33,7 +33,7 @@ function Contact() {
     <div className="contact-container">
       <h1>Contact Me</h1>
       <p>
-        I'm actively looking for opportunities as a **Software Developer / Web Developer / Frontend Developer**.
+        I'm actively looking for opportunities as a Software Developer / Web Developer / Frontend Developer.
         Feel free to reach out if you have an opportunity or want to connect!
       </p>
 
