@@ -17,7 +17,7 @@ function About() {
             I have experience in <b>React, Node.js, Express, MongoDB, JavaScript</b>, and more. I'm always eager to 
             learn new technologies and improve my skills.
           </p>
-          <a href="Resumenewlyupdated.pdf" download>
+          <a href="anjiresume352025.pdf" download>
             <button className="btnn">Download Resume</button>
           </a>
         </div>
