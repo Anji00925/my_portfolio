@@ -6,7 +6,7 @@ function About() {
     <div className="about-container">
       {/* Profile Section */}
       <div className="about-content">
-        <img src="profile.jpg" alt="My Profile" className="profile-pic" />
+        <img src="/profile.jpg" alt="My Profile" className="profile-pic" />
         <div className="about-text">
           <h1>About Me</h1>
           <p>
