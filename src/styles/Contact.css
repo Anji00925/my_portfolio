@@ -65,3 +65,43 @@
     text-decoration: underline;
   }
   
+  .textarea-wrapper {
+  position: relative;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.textarea-wrapper textarea {
+  width: 100%;
+  padding: 12px 40px 12px 12px;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  color: #333;
+  outline: none;
+  resize: vertical;
+}
+
+.textarea-wrapper textarea:focus {
+  border-color: #888;
+}
+
+.sparkle-btn {
+  position: absolute;
+  bottom: 20px;
+  right: -40px;
+  background: #eee;
+  color: #333;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  font-size: 16px;
+  width: 28px;
+  height: 28px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.sparkle-btn:hover {
+  background: #ddd;
+}
