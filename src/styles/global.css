@@ -48,6 +48,13 @@ nav a {
   font-weight: 500;
   transition: color 0.3s ease;
 }
+#home,
+#about,
+#projects,
+#contact {
+  scroll-margin-top: 80px;
+}
+
 
 nav a:hover {
   color: #0073e6; /* Light blue color on hover */
@@ -158,3 +165,18 @@ footer {
     padding: 10px;
   }
 }
+
+nav ul li {
+  cursor: pointer;
+}
+
+* {
+  transition: all 0.25s ease;
+}
+
+.btn:hover {
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+

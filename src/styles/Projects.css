@@ -1,86 +1,131 @@
 .projects-container {
-    text-align: center;
-    padding: 50px;
-  }
-  
-  .projects-grid {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 20px;
-  }
-  
-  .project-card {
-    width: 300px;
-    padding: 20px;
-    border-radius: 8px;
-    background: linear-gradient(135deg, #1e1e2f, #282846);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    text-align: center;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-    color: white;
-    position: relative;
-    overflow: hidden;
-  }
-  
-  /* Titles & Text */
-  .project-card h2 {
-    margin-bottom: 10px;
-    color: #fff;
-  }
-  
-  .project-card p {
-    color: #ccc;
-  }
-  
-  /* Smoother Hover Effect */
-  .project-card:hover {
-    transform: translateY(-5px) scale(1.02); /* Less movement */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-  }
-  
-  /* Gradient Background Animation */
-  .project-card::before {
-    content: "";
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: linear-gradient(45deg, #007bff, #ff00ff, #00ff99);
-    background-size: 300% 300%;
-    z-index: -1;
-    opacity: 0;
-    transition: opacity 0.2s ease-in-out;
-    animation: rainbow 8s infinite linear; /* Slower animation */
-  }
-  
-  /* On Hover, Show Background */
-  .project-card:hover::before {
-    opacity: 0.7; /* Less intense effect */
-  }
-  
-  /* Smooth Gradient Animation */
-  @keyframes rainbow {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-  }
-  
-  /* Button Styling */
-  .btn {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 10px 15px;
-    background-color: rgba(255, 255, 255, 0.15);
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: 0.2s;
-    border: 1px solid white;
-  }
-  
-  .btn:hover {
-    background-color: rgba(255, 255, 255, 0.3);
-  }
-  
+  text-align: center;
+  padding: 70px 30px;
+}
+
+.projects-container h1 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #222;
+}
+
+/* Grid */
+.projects-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+/* Card */
+.project-card {
+  width: 320px;
+  padding: 24px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #1f1f2e, #2b2b45);
+  color: white;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+/* Hover lift */
+.project-card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 25px 45px rgba(0, 0, 0, 0.4);
+}
+
+/* Subtle animated gradient border */
+.project-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 14px;
+  padding: 2px;
+  background: linear-gradient(
+    120deg,
+    #007bff,
+    #9b5cff,
+    #00ffcc
+  );
+  background-size: 300% 300%;
+  animation: borderFlow 6s linear infinite;
+  mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  mask-composite: exclude;
+  opacity: 0.6;
+}
+
+@keyframes borderFlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Content */
+.project-card h2 {
+  font-size: 1.4rem;
+  margin-bottom: 12px;
+}
+
+.project-card p {
+  font-size: 0.95rem;
+  color: #d1d1d1;
+  line-height: 1.6;
+}
+
+/* Tech stack */
+.tech-stack {
+  margin-top: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+}
+
+.tech {
+  font-size: 0.75rem;
+  padding: 5px 10px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.12);
+}
+
+/* Buttons */
+.project-actions {
+  margin-top: 20px;
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
+}
+
+.project-actions a {
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  text-decoration: none;
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  transition: background 0.25s ease, transform 0.25s ease;
+}
+
+.project-actions a:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateY(-2px);
+}
+
+.project-card::before {
+  pointer-events: none;   /* ✅ ADD THIS */
+}
+
+.project-card h2,
+.project-card p,
+.tech-stack {
+  position: relative;
+  z-index: 2;
+}
+
+

@@ -11,13 +11,29 @@ function Home() {
         I'm a passionate developer who loves building web applications. Explore my projects and feel free to reach out!
       </p>
       <div className="home-buttons">
-        <Link to="/projects">
-          <button className="btn">View Projects</button>
-        </Link>
-        <Link to="/contact">
-          <button className="btn btn-secondary">Contact Me</button>
-        </Link>
-      </div>
+  <button
+    className="btn"
+    onClick={() =>
+      document.getElementById("projects").scrollIntoView({
+        behavior: "smooth",
+      })
+    }
+  >
+    View Projects
+  </button>
+
+  <button
+    className="btn btn-secondary"
+    onClick={() =>
+      document.getElementById("contact").scrollIntoView({
+        behavior: "smooth",
+      })
+    }
+  >
+    Contact Me
+  </button>
+</div>
+
 
       <a
         href="https://www.linkedin.com/feed/"
